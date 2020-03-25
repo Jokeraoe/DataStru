@@ -1,2 +1,2 @@
-# Gitstudy
-Study the rules and commond of git
+# DataStru
+1、Stack
