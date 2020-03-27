@@ -30,24 +30,19 @@ class stack_sequential_storage():
 '''
 linked storage
 '''
+class Node():
+    def __init__(self,data):
+        self.Data = data
+        self.Next = None
+
 class stack_linked_storage():
     def __init__(self):       
-        self.Stack = headnode()
-        self.store = []
-    
-    def headnode(self):
-        Data = len(self.store)
-        Next = None
+        self.Stack = Node(None)
 
-    def Node(self,DATA):        
-        self.store.append(DATA)
-        
-        data = DATA
-        Next = self.store.index(data) -1
         
     def push_element(self,x):
         tmpnode = Node(x)
-        Stack.next = self.store.index(tmpnode.data)
+        Stack.next = tmpnode
 
     def pop_element(self,x):
         if self.Stack.Next == None:
@@ -55,9 +50,9 @@ class stack_linked_storage():
 
         else:
             firstcell = self.Stack.next
-            firstnode.next = firstcell.next
+            self.Stack.next = firstcell.next
             topelement = firstcell.data
-            del firstcell
+            # free(firstcell)
 
             print(topelement)
         
